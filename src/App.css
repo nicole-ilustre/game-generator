@@ -1,21 +1,32 @@
-.flex-container-descriptions,
-.flex-container-buttons, .reset-btn {
-  margin: 3rem auto 3rem auto;
+.flex-container-main {
   display: flex;
-  width: 80%;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  grid-gap: 1rem;
+  justify-content: space-between;
 }
 
-.btn-description, .not-selected {
-  background-color: rgb(71, 191, 213);
-  border: none;
-  border-radius: .5rem;
-  padding: .5rem;
-  font-size: 1rem
+.flex-container-descriptions {
+  display: flex;
+  width: 50%;
+  flex-flow: row wrap;
+  border: 1px solid black;
 }
-.btn-description:hover, .selected {
+
+.btn-description,
+.not-selected {
+  background-color: rgb(71, 191, 213);
+  border: 1px solid black;
+  font-size: 1.5rem;
+  flex: 1 1 160px;
+  height: 160px;
+}
+
+.empty-div {
+  background-color: rgb(71, 191, 213);
+  border: 1px solid black;
+  flex: 158px;
+}
+
+.btn-description:hover,
+.selected {
   transition: 0.3s ease-in-out;
   background-color: rgb(29, 46, 49);
   color: rgb(71, 191, 213);

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { gameTypes } from '../../gameTypes'
 import { ErrorMessage } from '../ErrorMessage'
 
-export const SelectedResult = (props) => {
+export const Result = (props) => {
   const { selectedDescription } = props;
   const [results, setResults] = useState([]);
 
@@ -29,7 +29,7 @@ export const SelectedResult = (props) => {
   }, [selectedDescription]);
 
   return (
-      <div>
+      <div className='div-result'>
           {results.length === 0 &&
           <ErrorMessage errorMessage="No match found. Please try again." />}
       <ul>

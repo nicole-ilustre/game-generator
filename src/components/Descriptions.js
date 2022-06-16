@@ -20,6 +20,7 @@ export const Descriptions = ({
   };
   return (
     <div className='flex-container-descriptions'>
+      <span className='empty-div'></span>
       {gameDescriptions.map((description) => {
         return (
           <button
@@ -28,7 +29,7 @@ export const Descriptions = ({
             onClick={(e) => onSelect(e)}
             key={description}
           >
-            {description}
+            {description.toUpperCase()}
           </button>
         );
       })}

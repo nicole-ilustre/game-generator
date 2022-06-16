@@ -13,7 +13,7 @@ export const gameTypes = [
     description: 'Memory game description',
     numberOfPlayers: '2-4',
     duration: '20mins',
-    descriptions: ['strategic', 'sneaky', 'competitive', '2-player'],
+    descriptions: ['strategic', 'competitive', '2-player'],
   },
   {
     title: 'Action game',
@@ -21,7 +21,7 @@ export const gameTypes = [
     description: 'Memory game description',
     numberOfPlayers: '2-4',
     duration: '15mins',
-    descriptions: ['fast-paced', 'competitive', 'kids-friendly', '2-player'],
+    descriptions: ['fast-paced', 'competitive', 'short', 'simple', '2-player'],
   },
   {
     title: 'Market game',
@@ -45,7 +45,7 @@ export const gameTypes = [
     description: 'Memory game description',
     numberOfPlayers: '5-6',
     duration: '2mins',
-    descriptions: ['fast-paced', 'kids-friendly', 'more than 4 players'],
+    descriptions: ['fast-paced', 'simple', '4+ players', 'short'],
   },
   {
     title: 'Tile game',
@@ -53,7 +53,7 @@ export const gameTypes = [
     description: 'Memory game description',
     numberOfPlayers: '2-4',
     duration: '25mins',
-    descriptions: ['strategic', 'competitive', '2-player', 'sneaky'],
+    descriptions: ['strategic', 'competitive', '2-player'],
   },
   {
     title: 'Deduction game',
@@ -61,7 +61,7 @@ export const gameTypes = [
     description: 'Memory game description',
     numberOfPlayers: '3-6',
     duration: '10mins',
-    descriptions: ['strategic', 'competitive', 'sneaky', 'more than 4 players'],
+    descriptions: ['strategic', 'competitive', '4+ players'],
   },
   {
     title: 'Numbers game',
@@ -86,12 +86,12 @@ export const gameTypes = [
     numberOfPlayers: '3-8',
     duration: '20mins',
     descriptions: [
-      'non-competitive',
-      'more than 4 players',
-      'uses words/language',
-      'uses imagination',
-      'kids-friendly',
+      '4+ players',
+      'words',
+      'creative',
       'fast-paced',
+      'simple',
+      'short'
     ],
   },
   {
@@ -101,13 +101,12 @@ export const gameTypes = [
     numberOfPlayers: '2-5',
     duration: '10mins',
     descriptions: [
-      'non-competitive',
       '2-player',
-      'more than 4 players',
-      'uses words/language',
-      'uses imagination',
-      'kids-friendly',
+      '4+ players',
+      'words',
+      'creative',
       'fast-paced',
+      'short'
     ],
   },
   {
@@ -120,7 +119,7 @@ export const gameTypes = [
       'strategic',
       'competitive',
       '2-player',
-      'more than 4 players',
+      '4+ players',
     ],
   },
   {
@@ -140,8 +139,7 @@ export const gameTypes = [
     descriptions: [
       'strategic',
       'teamwork',
-      'more than 4 players',
-      'sneaky',
+      '4+ players',
       'fast-paced',
     ],
   },

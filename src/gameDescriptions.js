@@ -1,1 +1,13 @@
-export const gameDescriptions = ["fast-paced", "kids-friendly", "uses imagination", "strategic", "teamwork", "uses words/language", "sneaky", "non-competitive", "competitive", "2-player", "more than 4 players"]
+export const gameDescriptions = [
+  'fast-paced',
+  'short',
+  'creative',
+  'strategic',
+  'teamwork',
+  'words',
+  'simple',
+  'competitive',
+  '2 players',
+  '4+ players',
+  'friendly',
+];

@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import { Descriptions } from './components/Descriptions';
-import { SelectedResult } from './components/results/SelectedResult';
+import { Result } from './components/results/Result';
 import { ErrorMessage } from './components/ErrorMessage';
 
 function App() {
@@ -16,17 +16,15 @@ function App() {
 
   return (
     <div>
-      <h1>No idea which game to play?</h1>
-      <h2>
-        Tell us what you feel like playing and we'll tell you which game to
-        play.
-      </h2>
-      <Descriptions {...props} />
-
+      <h1>what do you feel like playing?</h1>
+      <h2>Tap the words to find a game</h2>
+      <div className='flex-container-main'>
+        <Descriptions {...props} />
+        {!isError && selectedDescription.length > 0 && (
+          <Result selectedDescription={selectedDescription} />
+        )}
+      </div>
       {isError && <ErrorMessage errorMessage='Please choose from above' />}
-      {!isError && selectedDescription.length > 0 && (
-        <SelectedResult selectedDescription={selectedDescription} />
-      )}
     </div>
   );
 }

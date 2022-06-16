@@ -1,21 +1,23 @@
 import { gameDescriptions } from '../gameDescriptions';
+import { Props } from '../App';
 
 export const Descriptions = ({
   selectedDescription,
   setSelectedDescription,
   setIsError,
-}) => {
-  const onSelect = async (e) => {
-    if (selectedDescription.includes(e.target.value)) {
+}: Props) => {
+  const onSelect = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const target = e.target as HTMLButtonElement;
+    if (selectedDescription.includes(target.value)) {
       const newSelectedDescription = selectedDescription.filter(
-        (description) => description !== e.target.value
+        (description: string) => description !== target.value
       );
       setSelectedDescription(newSelectedDescription);
-      await e.target.classList.toggle('not-selected');
+      target.classList.toggle('selected');
     } else {
       setIsError(false);
-      setSelectedDescription([...selectedDescription, e.target.value]);
-      await e.target.classList.toggle('selected');
+      setSelectedDescription([...selectedDescription, target.value]);
+      target.classList.toggle('selected');
     }
   };
   return (

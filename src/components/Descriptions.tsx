@@ -19,20 +19,23 @@ export const Descriptions = ({
       setSelectedDescription([...selectedDescription, target.value]);
       target.classList.toggle('selected');
     }
+    if (target.classList.contains('selected')) {
+      console.log(target.classList)
+      target.style.backgroundImage = "url(./btn-img-selected/" + target.value + "-selected.png)"
+    } else {
+      target.style.backgroundImage = "url(./btn-img-unselected/" + target.value + "-unselected.png)"
+    }
   };
   return (
     <div className='flex-container-descriptions'>
-      <span className='empty-div'></span>
       {gameDescriptions.map((description) => {
         return (
           <button
             className='btn-description'
-            value={description}
+            value={description.description}
             onClick={(e) => onSelect(e)}
-            key={description}
-          >
-            {description.toUpperCase()}
-          </button>
+            style={{ backgroundImage: "url(" + description.icon_unselected + ")"}}
+          />
         );
       })}
     </div>

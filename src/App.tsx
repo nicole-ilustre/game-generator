@@ -21,9 +21,11 @@ function App() {
 
   return (
     <div>
-      <h1>what do you feel like playing?</h1>
+      <img src='./bg-images/header-design-static.png' alt='header' />
+      <h1>What do you feel like playing?</h1>
       <h2>Tap the words to find a game</h2>
-      <div className='flex-container-main'>
+
+      <div>
         <Descriptions {...props} />
         {!isError && selectedDescription.length > 0 && (
           <Result {...props} />

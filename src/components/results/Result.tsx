@@ -3,8 +3,14 @@ import { gameTypes } from '../../gameTypes';
 import { ErrorMessage } from '../ErrorMessage';
 import { Props } from '../../App';
 
+type GameTypes = {
+  title: string;
+  icon: string;
+  descriptions: string[]
+}
+
 export const Result = ({ selectedDescription }: Props) => {
-  const [results, setResults] = useState<string[]>([]);
+  const [results, setResults] = useState<GameTypes[]>([]);
 
   useEffect(() => {
     const matchScores: number[] = [];
@@ -19,10 +25,10 @@ export const Result = ({ selectedDescription }: Props) => {
       });
       matchScores.push(match);
     });
-    const matches: string[] = [];
+    const matches: GameTypes[] = [];
     matchScores.forEach((score, i) => {
       if (score === selectedDescription.length) {
-        matches.push(gameTypes[i].title);
+        matches.push(gameTypes[i]);
       }
     });
     setResults(matches);
@@ -33,11 +39,9 @@ export const Result = ({ selectedDescription }: Props) => {
       {results.length === 0 && (
         <ErrorMessage errorMessage='No match found. Please try again.' />
       )}
-      <ul>
         {results?.map((result) => {
-          return <li key={result}>{result}</li>;
+          return <a href={`https://www.gamechanger.best/${result.title}`} target="_blank" rel="noreferrer"><img src={result.icon} key={result.title} alt='result' /></a>;
         })}
-      </ul>
     </div>
   );
 };

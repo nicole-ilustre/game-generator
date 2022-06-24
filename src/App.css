@@ -1,17 +1,24 @@
 @import url('http://fonts.cdnfonts.com/css/androgyne');
-@import url('https://fonts.googleapis.com/css2?family=Minion&display=swap');
 
-h1 {
+h1,
+h2, .error-message {
   text-align: center;
   font-family: 'Androgyne', sans-serif;
+  color: gray
 }
 
-h2 {
-  font-family: 'Minion', sans-serif;
+h1 {
+  font-size: 3rem;
+}
+
+.error-message {
+  margin-top: 3rem;
+  color: red;
+  font-size: 2rem;
 }
 
 .flex-container-main {
- margin: auto;
+  margin: auto;
 }
 
 .flex-container-descriptions {
@@ -19,17 +26,20 @@ h2 {
   flex-flow: row wrap;
 }
 
-.btn-description {
-  border: none;
-  background-repeat: no-repeat;
- height: 80px;
-  width: 100%
+.flex-container-descriptions>* {
+  flex-basis: 20%
 }
 
-/* .btn-description:hover,
-.selected {
-  transition: 0.3s ease-in-out;
-  background-color: rgb(29, 46, 49);
-  color: rgb(71, 191, 213);
-  border: 1px solid rgb(71, 191, 213);
-} */
+.btn-description {
+  border: none;
+  background: none;
+  background-repeat: no-repeat;
+  height: 60px;
+  margin-top: 1rem;
+}
+
+.div-result {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center
+}

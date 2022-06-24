@@ -4,6 +4,6 @@ interface Props {
 
 export const ErrorMessage = ({ errorMessage }: Props) => {
     return (
-        <div>{errorMessage}</div>
+        <div className='error-message'>{errorMessage}</div>
     )
 }

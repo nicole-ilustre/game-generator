@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div>
-      <img src='./bg-images/header-design-static.png' alt='header' />
+      <img className='header-img' src='./bg-images/header-design-static.png' alt='header' />
       <h1>What do you feel like playing?</h1>
       <h2>Tap the words to find a game</h2>
 

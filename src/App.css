@@ -1,10 +1,15 @@
 @import url('http://fonts.cdnfonts.com/css/androgyne');
 
+.header-img {
+  width: 100%;
+}
+
 h1,
-h2, .error-message {
+h2,
+.error-message {
   text-align: center;
   font-family: 'Androgyne', sans-serif;
-  color: gray
+  color: gray;
 }
 
 h1 {
@@ -17,17 +22,10 @@ h1 {
   font-size: 2rem;
 }
 
-.flex-container-main {
-  margin: auto;
-}
-
 .flex-container-descriptions {
   display: flex;
   flex-flow: row wrap;
-}
-
-.flex-container-descriptions>* {
-  flex-basis: 20%
+  justify-content: space-evenly;
 }
 
 .btn-description {
@@ -35,11 +33,12 @@ h1 {
   background: none;
   background-repeat: no-repeat;
   height: 60px;
+  width: 270px;
   margin-top: 1rem;
 }
 
 .div-result {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center
+  justify-content: center;
 }

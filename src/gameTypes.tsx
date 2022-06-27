@@ -63,7 +63,7 @@ export const gameTypes = [
   },
   {
     title: 'storytelling',
-    icon: './result-images/result-memory.png',
+    icon: './result-images/result-storytelling.png',
     descriptions: [
       '2-players',
       '4+players',
@@ -75,7 +75,7 @@ export const gameTypes = [
   },
   {
     title: 'dice',
-    icon: './result-images/result-memory.png',
+    icon: './result-images/result-dice.png',
     descriptions: [
       'strategic',
       'competitive',

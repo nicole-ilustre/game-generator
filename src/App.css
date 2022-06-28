@@ -2,6 +2,11 @@
 
 .header-img {
   width: 100%;
+  height: 220px; 
+  background-image: url('../public/bg-images/header-design-static.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 h1,
@@ -14,6 +19,15 @@ h2,
 
 h1 {
   font-size: 3rem;
+}
+
+@media screen and (max-width: 390px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem
+  }
 }
 
 .error-message {

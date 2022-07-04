@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { gameTypes } from '../../gameTypes';
 import { ErrorMessage } from '../ErrorMessage';
 import { Props } from '../../App';
@@ -6,12 +6,10 @@ import { Props } from '../../App';
 type GameTypes = {
   title: string;
   icon: string;
-  descriptions: string[]
-}
+  descriptions: string[];
+};
 
-export const Result = ({ selectedDescription }: Props) => {
-  const [results, setResults] = useState<GameTypes[]>([]);
-
+export const Result = ({ selectedDescription, results, setResults }: Props) => {
   useEffect(() => {
     const matchScores: number[] = [];
     const gameDescriptions = gameTypes.map((game) => game.descriptions);
@@ -32,6 +30,7 @@ export const Result = ({ selectedDescription }: Props) => {
       }
     });
     setResults(matches);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedDescription]);
 
   return (
@@ -39,9 +38,18 @@ export const Result = ({ selectedDescription }: Props) => {
       {results.length === 0 && (
         <ErrorMessage errorMessage='No match found. Please try again.' />
       )}
-        {results?.map((result) => {
-          return <a href={`https://www.gamechanger.best/${result.title}`} target="_blank" rel="noreferrer"><img src={result.icon} key={result.title} alt='result' /></a>;
-        })}
+      {results?.map((result) => {
+        return (
+          <a
+            href={`https://www.gamechanger.best/${result.title}`}
+            target='_blank'
+            rel='noreferrer'
+            key={result.title}
+          >
+            <img src={result.icon} key={result.title} alt='result' />
+          </a>
+        );
+      })}
     </div>
   );
 };

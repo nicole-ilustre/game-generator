@@ -6,17 +6,28 @@ import { Result } from './components/results/Result';
 export interface Props {
   selectedDescription: string[],
   setSelectedDescription: React.Dispatch<React.SetStateAction<string[]>>,
-  setIsError: React.Dispatch<React.SetStateAction<boolean>>
+  setIsError: React.Dispatch<React.SetStateAction<boolean>>,
+  results: GameTypes[],
+  setResults: React.Dispatch<React.SetStateAction<GameTypes[]>>
+}
+
+type GameTypes = {
+  title: string;
+  icon: string;
+  descriptions: string[]
 }
 
 function App() {
   const [selectedDescription, setSelectedDescription] = useState<string[]>([]);
   const [isError, setIsError] = useState(false);
+  const [results, setResults] = useState<GameTypes[]>([]);
 
   const props: Props = {
     selectedDescription,
     setSelectedDescription,
     setIsError,
+    results,
+    setResults
   };
 
   return (

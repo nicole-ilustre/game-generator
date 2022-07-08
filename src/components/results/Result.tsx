@@ -29,7 +29,8 @@ export const Result = ({ selectedDescription, results, setResults }: Props) => {
         matches.push(gameTypes[i]);
       }
     });
-    setResults(matches);
+   setResults(matches);
+;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedDescription]);
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 import { gameDescriptions } from '../gameDescriptions';
 import { Props } from '../App';
 
@@ -8,24 +8,45 @@ export const Descriptions = ({
   setIsError,
   results,
 }: Props) => {
-  const [resultDescriptions, setResultDescriptions] = useState<string[][]>([]);
+
   useEffect(() => {
+    const resultDescriptions: string[] = [];
     results.forEach((result) =>
-      setResultDescriptions([result.descriptions])
+      result.descriptions.forEach((description) => {
+        if (!resultDescriptions.includes(description)) {
+          console.log(description, true)
+          return resultDescriptions.push(description)
+        } else {
+          console.log(description, false)
+          return resultDescriptions.splice(resultDescriptions.indexOf(description), 1)
+        };
+      })
     );
 
-    // const difference = gameDescriptions.filter(
-    //   (description) =>
-    //     resultDescriptions.indexOf(description.description) === -1
-    // );
+    const difference = resultDescriptions.filter(
+      (description) => selectedDescription.indexOf(description) === -1
+    );
+
+    const btns = Array.from(
+      document.getElementsByClassName(
+        'btn-description'
+      ) as HTMLCollectionOf<HTMLButtonElement>
+    );
+    if (results.length > 0) {
+      btns.forEach((btn: HTMLButtonElement) => {
+        if (difference.includes(btn.id) && selectedDescription.includes(btn.id)) {
+          return;
+        } else if (!difference.includes(btn.id) && !selectedDescription.includes(btn.id)) {
+          btn.disabled = true
+          btn.style.opacity = '.3';
+        }
+      });
+    }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [results]);
 
-  console.log(resultDescriptions);
-
   const onSelect = (e: React.MouseEvent<HTMLButtonElement>) => {
-
     const target = e.target as HTMLButtonElement;
     if (selectedDescription.includes(target.value)) {
       const newSelectedDescription = selectedDescription.filter(
@@ -46,11 +67,13 @@ export const Descriptions = ({
         'url(./btn-img-unselected/' + target.value + '-unselected.png)';
     }
   };
+
   return (
     <div className='flex-container-descriptions'>
       {gameDescriptions.map((description) => {
         return (
           <button
+            id={description.description}
             className='btn-description'
             value={description.description}
             key={description.description}

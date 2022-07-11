@@ -46,6 +46,7 @@ h1 {
   border: none;
   background: none;
   background-repeat: no-repeat;
+  background-position: center;
   height: 60px;
   width: 270px;
   margin-top: 1rem;

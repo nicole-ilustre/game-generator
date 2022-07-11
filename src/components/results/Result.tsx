@@ -1,12 +1,7 @@
-import { useEffect } from "react";
-import { gameTypes } from "../../gameTypes";
-import { Props } from "../../App";
-
-type GameTypes = {
-  title: string;
-  icon: string;
-  descriptions: string[];
-};
+import { useEffect } from 'react';
+import { gameTypes } from '../../gameTypes';
+import { Props } from '../../App';
+import { GameTypes } from '../../App';
 
 export const Result = ({ selectedDescription, results, setResults }: Props) => {
   useEffect(() => {
@@ -14,12 +9,14 @@ export const Result = ({ selectedDescription, results, setResults }: Props) => {
     const gameDescriptions = gameTypes.map((game) => game.descriptions);
     gameDescriptions.forEach((game) => {
       let match = 0;
-      selectedDescription.forEach((description) => {
-        if (game.includes(description)) {
-          match++;
-        }
-        return;
-      });
+      if (selectedDescription) {
+        selectedDescription.forEach((description) => {
+          if (game.includes(description)) {
+            match++;
+          }
+          return;
+        });
+      }
       matchScores.push(match);
     });
     const matches: GameTypes[] = [];
@@ -33,17 +30,17 @@ export const Result = ({ selectedDescription, results, setResults }: Props) => {
   }, [selectedDescription]);
 
   return (
-    <div className="div-result">
+    <div className='div-result'>
       {results.length === 0 &&
-        gameTypes.map((result) => {
+        gameTypes.map((game) => {
           return (
             <a
-              href={`https://www.gamechanger.best/${result.title}`}
-              target="_blank"
-              rel="noreferrer"
-              key={result.title}
+              href={`https://www.gamechanger.best/${game.title}`}
+              target='_blank'
+              rel='noreferrer'
+              key={game.title}
             >
-              <img src={result.icon} key={result.title} alt="result" />
+              <img src={game.icon} key={game.title} alt='result' />
             </a>
           );
         })}
@@ -51,11 +48,11 @@ export const Result = ({ selectedDescription, results, setResults }: Props) => {
         return (
           <a
             href={`https://www.gamechanger.best/${result.title}`}
-            target="_blank"
-            rel="noreferrer"
+            target='_blank'
+            rel='noreferrer'
             key={result.title}
           >
-            <img src={result.icon} key={result.title} alt="result" />
+            <img src={result.icon} key={result.title} alt='result' />
           </a>
         );
       })}

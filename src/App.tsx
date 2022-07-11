@@ -2,7 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import { Descriptions } from "./components/Descriptions";
 import { Result } from "./components/results/Result";
-
+import { ResultHeader } from "./components/results/ResultHeader";
 export interface Props {
   selectedDescription: string[];
   setSelectedDescription: React.Dispatch<React.SetStateAction<string[]>>;
@@ -11,7 +11,7 @@ export interface Props {
   setResults: React.Dispatch<React.SetStateAction<GameTypes[]>>;
 }
 
-type GameTypes = {
+export type GameTypes = {
   title: string;
   icon: string;
   descriptions: string[];
@@ -38,6 +38,7 @@ function App() {
 
       <div>
         <Descriptions {...props} />
+        {results.length > 0 && <ResultHeader results={results} />}
         {!isError && <Result {...props} />}
       </div>
     </div>

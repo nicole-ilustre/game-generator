@@ -4,11 +4,17 @@
   h1 {
     font-size: 1.5rem;
   }
-  h2 {
+  h2, h3 {
     font-size: 1rem
-  }
+  } 
   .btn-description {
-    width: 178px;
+    background-size: contain;
+    min-height: 30px;
+    min-width: 120px;
+  }
+  .result-icon {
+    object-fit: contain;
+    height: 130px;
   }
 }
 
@@ -16,8 +22,12 @@
   h1 {
     font-size: 3rem;
   }
+  h3 {
+    font-size: 1.5rem;
+  }
   .btn-description {
     width: 270px;
+    height: 60px;
   }
 }
 
@@ -45,7 +55,6 @@ h3,
 h3 {
   border-top: .1rem solid gray;
   padding-top: 1rem;
-  font-size: 1.5rem;
 }
 
 h2 {
@@ -89,9 +98,9 @@ h2:after {
 .btn-description {
   border: none;
   background: none;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 60px;
   margin-top: 1rem;
 }
 
@@ -99,4 +108,8 @@ h2:after {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+}
+
+.result-icon:hover {
+  opacity: .5;
 }

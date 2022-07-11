@@ -52,7 +52,12 @@ export const Result = ({ selectedDescription, results, setResults }: Props) => {
             rel='noreferrer'
             key={result.title}
           >
-            <img src={result.icon} key={result.title} alt='result' />
+            <img
+              className='result-icon'
+              src={result.icon}
+              key={result.title}
+              alt='result'
+            />
           </a>
         );
       })}

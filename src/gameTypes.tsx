@@ -89,7 +89,7 @@ export const gameTypes = [
     descriptions: ['strategic', 'competitive', '2-players'],
   },
   {
-    title: 'hiddentidentity',
+    title: 'hiddenidentity',
     icon: './result-images/result-hiddenidentity.png',
     descriptions: [
       'strategic',

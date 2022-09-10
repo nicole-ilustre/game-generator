@@ -7,47 +7,47 @@ export const gameTypes = [
   {
     title: 'memory',
     icon: './result-images/result-memory.png',
-    descriptions: ['strategic', 'competitive', '2-players'],
+    descriptions: ['strategic', 'competitive', '4+players', '2-players'],
   },
   {
     title: 'bluffing',
     icon: './result-images/result-bluffing.png',
-    descriptions: ['strategic', 'competitive', '2-players'],
+    descriptions: ['strategic', 'competitive', '4+players'],
   },
   {
     title: 'action',
     icon: './result-images/result-action.png',
-    descriptions: ['fast-paced', 'competitive', 'short', 'simple', '2-players'],
+    descriptions: ['fast-paced', 'competitive', 'short', 'simple', '4+players', '2-players'],
   },
   {
     title: 'market',
     icon: './result-images/result-market.png',
-    descriptions: ['strategic', 'competitive', '2-players'],
+    descriptions: ['strategic', 'competitive', '4+players', '2-players'],
   },
   {
     title: 'coop',
     icon: './result-images/result-coop.png',
-    descriptions: ['strategic', 'teamwork', '2-players'],
+    descriptions: ['strategic', 'teamwork', '4+players', '2-players'],
   },
   {
     title: 'realtime',
     icon: './result-images/result-realtime.png',
-    descriptions: ['fast-paced', 'simple', '4+players', 'short'],
+    descriptions: ['fast-paced', 'simple', '4+players', 'short', '2-players'],
   },
   {
     title: 'tile',
     icon: './result-images/result-tile.png',
-    descriptions: ['strategic', 'competitive', '2-players'],
+    descriptions: ['strategic', 'competitive', '4+players', '2-players'],
   },
   {
     title: 'numbers',
     icon: './result-images/result-numbers.png',
-    descriptions: ['strategic', 'teamwork', '2-players'],
+    descriptions: ['strategic', 'teamwork', '4+players', '2-players'],
   },
   {
     title: 'bidding',
     icon: './result-images/result-bidding.png',
-    descriptions: ['strategic', 'competitive', '2-players'],
+    descriptions: ['strategic', 'competitive', '4+players', '2-players'],
   },
   {
     title: 'party',
@@ -86,7 +86,7 @@ export const gameTypes = [
   {
     title: 'setcollecting',
     icon: './result-images/result-setcollecting.png',
-    descriptions: ['strategic', 'competitive', '2-players'],
+    descriptions: ['strategic', 'competitive', '2-players', '4+players'],
   },
   {
     title: 'hiddenidentity',

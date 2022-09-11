@@ -95,18 +95,10 @@ export const Descriptions = ({
     }
   };
 
-  // xmlns={`url('${description.icon_unselected}')`}
-
   return (
     <div className="flex-container-descriptions">
       {gameDescriptions.map((description) => {
         return (
-          // <svg xmlns={description.icon_unselected} />
-          // <object data={description.icon_unselected}
-          //   aria-label='button image'
-          //   id={description.description}
-          //   className="btn-description"
-          // onClick={() => console.log('test')}/>
           <button
             id={description.description}
             className="btn-description"

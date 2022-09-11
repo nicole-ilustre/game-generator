@@ -4,7 +4,7 @@
     <g>
       <g>
         <rect x=".45" y=".45" width="177" height="46" rx="23" ry="23" fill="#39B54A" stroke="#fff" stroke-miterlimit="10" stroke-width=".9"/>
-        <text transform="translate(51.81 32.3)" fill="#fff" font-family="MyriadPro-Regular, &apos;Myriad Pro&apos;" font-size="25.65"><tspan x="0" y="0">4+ </tspan><tspan x="33.88" y="0" letter-spacing="0em">P</tspan><tspan x="47.4" y="0">l</tspan><tspan x="53.46" y="0" letter-spacing="0em">a</tspan><tspan x="65.62" y="0" letter-spacing="0em">y</tspan><tspan x="77.44" y="0">ers</tspan></text>
+        <text transform="translate(51.81 32.3)" fill="#fff" font-family="Roboto-Regular, Roboto" font-size="25.65"><tspan x="0" y="0">4+ </tspan><tspan x="33.88" y="0" letter-spacing="0em">P</tspan><tspan x="47.4" y="0">l</tspan><tspan x="53.46" y="0" letter-spacing="0em">a</tspan><tspan x="65.62" y="0" letter-spacing="0em">y</tspan><tspan x="77.44" y="0">ers</tspan></text>
       </g>
       <g>
         <path d="M32.61,24.7c4.07,0,7.38-3.31,7.38-7.38s-3.31-7.38-7.38-7.38-7.38,3.31-7.38,7.38,3.31,7.38,7.38,7.38Zm0-12.64c2.9,0,5.27,2.36,5.27,5.27s-2.36,5.27-5.27,5.27-5.27-2.36-5.27-5.27,2.36-5.27,5.27-5.27Z" fill="#fff"/>

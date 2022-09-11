@@ -51,6 +51,28 @@ export const Descriptions = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [results]);
 
+  // const onSelect = (e: React.MouseEvent<HTMLButtonElement>) => {
+  //   const target = e.target as HTMLButtonElement;
+  //   if (selectedDescription.includes(target.value)) {
+  //     const newSelectedDescription = selectedDescription.filter(
+  //       (description: string) => description !== target.value
+  //     );
+  //     setSelectedDescription(newSelectedDescription);
+  //     target.classList.toggle("selected");
+  //   } else {
+  //     setIsError(false);
+  //     setSelectedDescription([...selectedDescription, target.value]);
+  //     target.classList.toggle("selected");
+  //   }
+  //   if (target.classList.contains("selected")) {
+  //     target.style.backgroundImage =
+  //       "url(./btn-img-selected/" + target.value + "-selected.png)";
+  //   } else {
+  //     target.style.backgroundImage =
+  //       "url(./svg-images/" + target.value + "-unselected.svg)";
+  //   }
+  // };
+
   const onSelect = (e: React.MouseEvent<HTMLButtonElement>) => {
     const target = e.target as HTMLButtonElement;
     if (selectedDescription.includes(target.value)) {
@@ -66,17 +88,25 @@ export const Descriptions = ({
     }
     if (target.classList.contains("selected")) {
       target.style.backgroundImage =
-        "url(./btn-img-selected/" + target.value + "-selected.png)";
+        "url(./svg-selected-images/" + target.value + "-selected.svg)";
     } else {
       target.style.backgroundImage =
-        "url(./btn-img-unselected/" + target.value + "-unselected.png)";
+        "url(./svg-unselected-images/" + target.value + "-unselected.svg)";
     }
   };
+
+  // xmlns={`url('${description.icon_unselected}')`}
 
   return (
     <div className="flex-container-descriptions">
       {gameDescriptions.map((description) => {
         return (
+          // <svg xmlns={description.icon_unselected} />
+          // <object data={description.icon_unselected}
+          //   aria-label='button image'
+          //   id={description.description}
+          //   className="btn-description"
+          // onClick={() => console.log('test')}/>
           <button
             id={description.description}
             className="btn-description"

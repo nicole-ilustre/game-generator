@@ -25,25 +25,13 @@ export const Result = ({ selectedDescription, results, setResults }: Props) => {
         matches.push(gameTypes[i]);
       }
     });
+    console.log(matches);
     setResults(matches);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedDescription]);
 
   return (
     <div className='div-result'>
-      {results.length === 0 &&
-        gameTypes.map((game) => {
-          return (
-            <a
-              href={`https://www.gamechanger.best/${game.title}`}
-              target='_blank'
-              rel='noreferrer'
-              key={game.title}
-            >
-              <img src={game.icon} key={game.title} alt='result' />
-            </a>
-          );
-        })}
       {results?.map((result) => {
         return (
           <a
